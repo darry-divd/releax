@@ -15,18 +15,6 @@ server:
 
 
 
-upload:
- types: pdf,doc,png,jpg,rar
- tempDir: D:\service
-aliyun:
- oss:
-  endpoint: oss-cn-beijing-internal.aliyuncs.com
-  bucket:
-   name: jurankefu
-  access:
-   key:
-    secret: eNwGgboC4uufXD1I5sMHmtTBpumkMt
-    id: LTAI5tDXvGTFoJmyEsPJ4EjB
 
 
 
