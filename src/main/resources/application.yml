@@ -1,0 +1,38 @@
+
+spring:
+ datasource:
+  url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+  username: root
+  password: 123456
+  driver-class-name: com.mysql.jdbc.Driver
+
+ jpa:
+  hibernate:
+   ddl-auto: update
+  show-sql: true
+server:
+ port: 8080
+
+rocketmq:
+  accessKey: LTAIpSGuP2v64CyS
+  secretKey: 6JZYZMIU76IDbn2fLxztFXBNp3ax2u
+  nameSrvAddr: http://MQ_INST_1674701581010899_BX46aMeC.cn-beijing.mq-internal.aliyuncs.com:8080
+  topic: T_JURANDING_CONTRACT_SYNC
+  groupId: GID_JURANDING_CONTRACT
+  tag: A
+
+upload:
+ types: pdf,doc,png,jpg,rar
+ tempDir: D:\service
+aliyun:
+ oss:
+  endpoint: oss-cn-beijing-internal.aliyuncs.com
+  bucket:
+   name: jurankefu
+  access:
+   key:
+    secret: eNwGgboC4uufXD1I5sMHmtTBpumkMt
+    id: LTAI5tDXvGTFoJmyEsPJ4EjB
+
+
+
