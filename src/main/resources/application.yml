@@ -13,13 +13,7 @@ spring:
 server:
  port: 8080
 
-rocketmq:
-  accessKey: LTAIpSGuP2v64CyS
-  secretKey: 6JZYZMIU76IDbn2fLxztFXBNp3ax2u
-  nameSrvAddr: http://MQ_INST_1674701581010899_BX46aMeC.cn-beijing.mq-internal.aliyuncs.com:8080
-  topic: T_JURANDING_CONTRACT_SYNC
-  groupId: GID_JURANDING_CONTRACT
-  tag: A
+
 
 upload:
  types: pdf,doc,png,jpg,rar
