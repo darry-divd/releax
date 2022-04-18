@@ -91,49 +91,6 @@ public class test extends  AbstractApi{
 
 
 
-    private static String uploadfile() {
-
-
-        ClientBuilderConfiguration config = new ClientBuilderConfiguration();
-        // 设置OSSClient使用的最大连接数，默认1024
-        config.setMaxConnections(200);
-        //  设置请求超时时间，默认50秒
-        config.setSocketTimeout(10000);
-        //  设置失败请求重试次数，默认3次
-
-        config.setMaxErrorRetry(3);
-
-        String endpoint="oss-cn-beijing.aliyuncs.com";  //oss地址
-        String accessKeyId="LTAI5tDXvGTFoJmyEsPJ4EjB";   //osskeyid
-        String accessKeySecret="eNwGgboC4uufXD1I5sMHmtTBpumkMt"; // oss secret
-
-        OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret, config);
-
-        //上传文件
-        File file = new File("C:\\Users\\guancong\\Desktop\\2021各系统交接补充信息\\crm\\Easyhome_ERP_CRM_Job列表V1.0.1.xlsx");//本机文件路径
-        String  ceshifilename  = "测试文件名";
-        FileInputStream fileInputStream = null;
-        try {
-            fileInputStream = new FileInputStream(file);
-        String suffix = file.getName().substring(file.getName().lastIndexOf(".") + 1);
-
-        String fileName = UUID.randomUUID().toString() + suffix;
-        String targetFile = ceshifilename + fileName;
-        PutObjectResult putObjectResult = ossClient.putObject("jurankefu", targetFile, fileInputStream);  //  bucketname; 目标文件名称; 文件流
-        fileInputStream.close();
-        ossClient.shutdown();
-        if (null == putObjectResult.getResponse()) {
-            return targetFile;
-        }
-        return null;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            return null;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return endpoint;
-    }
 
     /*
      * 时间戳转换为yyyy-MM-dd格式/

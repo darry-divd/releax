@@ -9,7 +9,7 @@ import java.util.Map;
  * 封装阿里加密POST请求
  * @author 师伟凡	2018-3-7
  */
-public class HttpPostRequest extends AbstractRequest {
+public class HttpPostRequest  {
 
 	public 	HttpPostRequest() {
 		super();
